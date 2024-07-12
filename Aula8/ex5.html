@@ -8,11 +8,18 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             background-color: #e0e0e0;
+            height: 100%;
+            margin:0;            
+        }
+        .content{
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin:0;            
+            margin: 200px 0;
+        }
+        p{
+            margin: 0;
+            text-align: center;
         }
         .box{
             box-sizing: border-box;
@@ -33,14 +40,18 @@
             padding-top: 10px;
             font-size: 16px;
             margin: 0;
+            text-align: left;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>Título da Caixa</h1>
-        <p>Este é um exemplo de modelo de caixa.
-        </p>
-    </div>
+    <div class="content">
+        <div class="box">
+            <h1>Título da Caixa</h1>
+            <p>Este é um exemplo de modelo de caixa.
+            </p>
+        </div>
+    </div>    
+    <p>O elemento é renderizado e se ajusta conforme o tamanho da tela, respeitando o width de 50% do tamanho total da tela.</p>
 </body>
 </html>

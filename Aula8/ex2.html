@@ -7,14 +7,22 @@
     <style>
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #e0e0e0;
+            background-color: #e0e0e0;        
+            height: 100%;
+            margin:0;  
+        }
+        .content {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin:0;
+            margin: 150px 0;
         }
-        div{
+        p {
+            margin: 0;
+            padding: 0 80px;
+        }
+
+        .box1, .box2{
             width: 150px;
             height: 150px;
             padding: 20px;
@@ -30,29 +38,38 @@
             box-sizing: border-box;
             background-color: #ffb6c1;
         }
-        div h1{
+        .box1 h1, .box2 h1{
             font-size: 24px;
             margin:0;
             padding-bottom: 10px;
             border-bottom: 1px solid #ccc;
         }
-        div p{
-            padding-top: 10px;
+        .box1 p, .box2 p{
+            padding: 10px 0 0 0;
             font-size: 16px;
             margin: 0;
         }
     </style>
 </head>
 <body>
-    <div class="box1">
-        <h1>Título da Caixa</h1>
-        <p>Este é um exemplo de modelo de caixa.
-        </p>
-    </div>
-    <div class="box2">
-        <h1>Título da Caixa</h1>
-        <p>Este é um exemplo de modelo de caixa.
-        </p>
-    </div>
+    <div class="content">
+        <div class="box1">
+            <h1>Título da Caixa</h1>
+            <p>Este é um exemplo de modelo de caixa.
+            </p>
+        </div>
+        <div class="box2">
+            <h1>Título da Caixa</h1>
+            <p>Este é um exemplo de modelo de caixa.
+            </p>
+        </div>
+    </div>    
+    <p>O <b>box-sizing: border-box</b> diz ao navegador para considerar qualquer borda e preenchimento nos valores de largura e altura. 
+        Ou seja, se a div tiver 100px de largura, esses 100px incluirão qualquer borda ou preenchimento que foi adicionado, e a caixa de 
+        conteúdo encolherá para absorver essa largura extra.
+        Já o <b>box-sizing: content-box</b> fornece o comportamento padrão de dimensionamento de caixa CSS. Se uma div tiver 100px de largura,
+        a caixa de conteúdo do elemento terá 100px de largura, e a largura de qualquer borda ou preenchimento será adicionada à largura renderizada
+        final, tornando o elemento mais largo do que 100px.
+    </p>
 </body>
 </html>
